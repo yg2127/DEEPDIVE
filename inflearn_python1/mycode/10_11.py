@@ -54,4 +54,18 @@ print(id(m))
 print(id(n))
 print(id(m)==id(n))
 
-#파이썬 인터프리터는 효율성을 위해서 위와같이 
+#파이썬 인터프리터는 효율성을 위해서 위와같이 id형식으로 변수를 선언해놓는다
+
+# 다양한 변수 선언
+# Camel Case : numberOfCollegeGraduates -> Method에 사용
+# Pascal Case : NumberOfCollegeGraduates -> Class 에 사용
+# Snake Case : number_of_college_graduates -> 변수
+
+age = 1
+Age = 2
+_Age = 3 
+
+# 전부 다 된다
+
+# 예약어 파이썬에서 이미 선언해놓은 것들이므로 변수로 못씀
+# class, for, is, and, del, lambda 등등...

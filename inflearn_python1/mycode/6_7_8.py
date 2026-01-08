@@ -18,7 +18,7 @@ print ('yu geon')
 
 #format 사용 (d, s, f)
 
-d = digit, f = float, s = string
+# d = digit, f = float, s = string
 
 print('%s %s' %('one', 'two'))
 print('{} {} {}'.format('one', 'two', 1))
@@ -50,3 +50,14 @@ print("{:>4d}". format(23456789))
 
 print('%1.7f' %(3.141592432432543254325)) # 정수자리 -> 1, 실수자리 -> 7
 print('%06.4f' %(3.14159287695673)) #06 = 모든 자리가 6자리이고 그 중 소수점이 4자리
+
+
+# f-string 꼭 배워라 개편하다 ㄹㅇ
+n = "LEE"
+s = 12345678
+x = 10
+y = 1 
+ex3 = f'n = {n}, s = {s}, sum={x+y}'
+print(ex3)
+
+print(f'x+y = {x+y}, s = continuous number until 8 = {s}, x = {x}, y = {y}')
