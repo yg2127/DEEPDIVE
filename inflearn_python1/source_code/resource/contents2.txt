@@ -1,4 +1,6 @@
-Orange
-Apple
-Banana
-Melon
+Python
+Torch
+GoogleCloud
+Linux
+Docker
+Transformer
