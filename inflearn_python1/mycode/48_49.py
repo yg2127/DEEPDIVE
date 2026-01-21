@@ -64,7 +64,7 @@ print(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())))
 for i in range(5):
     print(i)
     # time.sleep(1) # 1초간 기다려라!
-    
+
 import random
 print(random.random()) # 0~1 실수
 

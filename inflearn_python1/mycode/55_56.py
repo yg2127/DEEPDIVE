@@ -28,7 +28,7 @@ while life > 0:
     for char in word:
         # 정답 단어 내에 추측 문자가 포함되어 있는 경우
         if char in guesses:
-            print(char, end = '')
+            print(char, end = '') 
         else:
             print("_", end = '')
             failed += 1

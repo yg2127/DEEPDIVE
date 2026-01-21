@@ -126,9 +126,9 @@ class dog(object): #object 를 상속받음
     
     species = 'firstdog' # 클래스 속성임. 해당 클래스의 모든 객체는 이런 속성을 가지고 있음
     # 초기화/인스턴스 속성
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+    def __init__(self, n, a):
+        self.name = n
+        self.age = a
         
     def info(self):
         return f'{self.name} is {self.age} year old'
