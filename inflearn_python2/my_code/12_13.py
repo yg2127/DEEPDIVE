@@ -1,0 +1,44 @@
+# 클래스 메소드 심화3
+
+class car(object):
+    """
+    Car class
+    Author : Yu
+    Date : 2026.01.22
+    Description : Class, Static, Instance Method
+    """
+    # 클래스 변수 : 모든 인스턴스가 공통적으로 갖고있는 속성
+    car_count = 0
+    price_per_raise = 1.0
+    
+    def __init__(self, company, details): # init 블록 내부가 바로 네임스페이스
+        self.company = company
+        self.details = details
+        car.car_count += 1
+    
+    def __str__(self): # 프린트문으로 문자열을 출력하는 사용자 입장에선 __str__을 하고
+        return f'str : {self.company} - {self.details}'
+    
+    def __repr__(self): # 얘는 개발자 레벨에서 객체값을 엄격하게 규정하여 반환할 때에 사용한다.
+        return f'repr : {self.company} - {self.details}'
+    
+    # 지금까지 사용한게 instance method
+    # self : 객체의 고유한 속성 값을 사용
+    def detail_info(self):
+        print(f'Current id : {id(self)}')
+        print(f'Car Detail Info : {self.company} {self.details.get('price')}')
+    
+    def __del__(self):
+        car.car_count -=1
+        
+
+car1 = car('Ferrari', {'color' : 'White', 'horsepower' : 680, 'price' : 700000000})
+car2 = car('BMW', {'color' : 'Black', 'horsepower' : 450, 'price' : 120000000})
+car3 = car('Audi', {'color' : 'Silver', 'horsepower' : 300, 'price' : 60000000})
+
+car2.detail_info()
+
+#가격 접근
+print(car2.details.get('price'))
+# 직접 자기 인스턴스에 접근하는건 별로 좋지 않음!! 
+print(car2.details['price'])
