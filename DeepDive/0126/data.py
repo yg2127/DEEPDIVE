@@ -74,3 +74,5 @@ print(df5.add(df6))
 print('\nfill_value=\n', df5.add(df6, fill_value = 0))
 
 # sub 메소드 (sub, rsub)
+# df.sub() & df.rsub() 는 다른 데이터 프레임, Series, 스칼라 등 데이터에서 빼기를 해주는 메소드
+# df1.sub(df2)는 df1 - df2, df1.rsub(df2)는 df2-df1로 빼는 대상이 다르다

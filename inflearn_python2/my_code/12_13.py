@@ -27,7 +27,8 @@ class car(object):
     def detail_info(self):
         print(f'Current id : {id(self)}')
         print(f'Car Detail Info : {self.company} {self.details.get('price')}')
-    
+    def get_price(self):
+        return f'Before Car Price -> company : {self.company}, price : {self.details.get('price') * car.price_per_raise}'
     def __del__(self):
         car.car_count -=1
         
@@ -42,3 +43,11 @@ car2.detail_info()
 print(car2.details.get('price'))
 # 직접 자기 인스턴스에 접근하는건 별로 좋지 않음!! 
 print(car2.details['price'])
+
+print(car1.get_price())
+print(car2.get_price())
+
+car.price_per_raise = 1.2 # 클래스 변수 변화함
+
+print(car1.get_price())
+print(car2.get_price())
