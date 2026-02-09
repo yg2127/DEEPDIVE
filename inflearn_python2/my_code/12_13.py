@@ -26,12 +26,26 @@ class car(object):
     # self : 객체의 고유한 속성 값을 사용
     def detail_info(self):
         print(f'Current id : {id(self)}')
-        print(f'Car Detail Info : {self.company} {self.details.get('price')}')
+        print(f"Car Detail Info : {self.company} {self.details.get('price')}")
     def get_price(self):
-        return f'Before Car Price -> company : {self.company}, price : {self.details.get('price') * car.price_per_raise}'
+        return f"Before Car Price -> company : {self.company}, price : {self.details.get('price') * car.price_per_raise}"
     def __del__(self):
         car.car_count -=1
-        
+    #Class Method
+    @classmethod
+    def raise_price(cls, per):
+        if per <= 1:
+            print('Please Enter 1 or More')
+            return
+        cls.price_per_raise = per
+        print(f'Success! Price increase {per}!')
+    #클래스 메소드를 사용해서 여러가지 함수 실행을 할 수 있다!
+    #Static method = 아무것도 받지 않는 메소드, 유연함
+    @staticmethod
+    def is_bmw(inst):
+        if inst.company == "BMW":
+            return f'This car is BMW!!'
+        else: return f"This car is not BMW... it's {inst.company}.."
 
 car1 = car('Ferrari', {'color' : 'White', 'horsepower' : 680, 'price' : 700000000})
 car2 = car('BMW', {'color' : 'Black', 'horsepower' : 450, 'price' : 120000000})
@@ -51,3 +65,13 @@ car.price_per_raise = 1.2 # 클래스 변수 변화함
 
 print(car1.get_price())
 print(car2.get_price())
+
+car.raise_price(1.6)
+
+print(car1.get_price())
+print(car2.get_price())
+
+#static mathod
+print(car.is_bmw(car1))
+print(car.is_bmw(car2))
+print(car.is_bmw(car3))
