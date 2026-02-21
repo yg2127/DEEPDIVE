@@ -9,3 +9,7 @@ inflearn_python1/source_code/sub/sub2/__pycache__
 .bkit/
 .claude/
 docs/
+
+# 대용량 데이터 파일
+*.db
+소상공인시장진흥공단_상가(상권)정보_20251231/
