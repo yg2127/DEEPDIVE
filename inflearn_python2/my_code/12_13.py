@@ -1,7 +1,7 @@
 # 클래스 메소드 심화3
 
 class car(object):
-    """
+    """ # car.__doc__ 을 출력하면 밑의 주석이 출력된다. 협업 개발을 위한 주석
     Car class
     Author : Yu
     Date : 2026.01.22
